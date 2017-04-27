@@ -1,8 +1,8 @@
 package com.example.service;
 
-import org.springframework.security.core.userdetails.User;
+import com.example.domain.UserDetails;
 
 public interface UserStoreService {
     boolean isUserLoggedIn(int id, String token);
-    User getUserData(int id);
+    UserDetails getUserData(int id);
 }

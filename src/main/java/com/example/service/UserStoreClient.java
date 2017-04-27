@@ -1,24 +1,21 @@
 package com.example.service;
 
-import org.springframework.security.core.userdetails.User;
+import com.example.domain.UserDetails;
 import org.springframework.stereotype.Service;
-
-import java.util.Collections;
 
 @Service
 public class UserStoreClient implements UserStoreService {
     public boolean isUserLoggedIn(int id, String token) {
-        if(id == 1 && token.equals("token1")) {
-            return true;
-        }
+        return id == 1 && token.equals("token1") || id == 2 && token.equals("token2");
 
-        return false;
     }
 
-    public User getUserData(int userId) {
+    public UserDetails getUserData(int userId) {
         switch (userId) {
             case 1:
-                return new User("Sergey", "secret", Collections.emptyList());
+                return new UserDetails(1, "Wife");
+            case 2:
+                return new UserDetails(2, "Husband");
             default:
                 return null;
         }
