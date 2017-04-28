@@ -5,7 +5,6 @@ import com.example.domain.ShoppingList;
 import com.example.domain.SynchronizeListRequest;
 import com.example.domain.SynchronizeResponse;
 import com.example.security.AuthenticationInfo;
-import com.example.service.ItemService;
 import com.example.service.ShoppingListPermissionService;
 import com.example.service.ShoppingListService;
 import org.slf4j.Logger;

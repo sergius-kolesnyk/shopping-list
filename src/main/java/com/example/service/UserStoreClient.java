@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 public class UserStoreClient implements UserStoreService {
     public boolean isUserLoggedIn(int id, String token) {
         return id == 1 && token.equals("token1") || id == 2 && token.equals("token2");
-
     }
 
     public UserDetails getUserData(int userId) {
